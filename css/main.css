@@ -65,10 +65,12 @@ body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
+
 .wrapper {
     width: 90%;
     margin: 0 5%;
 }
+
 
 /* ===================
     ALL: Orange Theme
@@ -242,10 +244,12 @@ nav a:hover {
         float: left;
     }
 
+    /*
     nav {
         float: right;
         width: 38%;
     }
+    */
 
 /* ============
     WIDE: Main
@@ -262,16 +266,47 @@ nav a:hover {
     }
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1024px) {
 
 /* ===============
     Maximal Width
    =============== */
-
+   
+	.header-container {
+	   width: 50%;
+	   height: 100%;
+	   overflow: hidden;
+	   position: fixed;
+	   background: rgba(25, 27, 32, 0.74);
+	}
+   
+	.main-container {
+	    margin-left: 50%;
+		position: relative;
+	}
+   
+    .main article {
+        float: left;
+        width: 100%;
+    }
+       
+	.main aside {
+	   left: 0%;
+	   width: 40%;
+	   bottom: 0px;
+	   position: fixed;
+	}
+	
+	#menu-left {
+		width: 90%;
+	}
+   
+   	/* 1140px - 10% for margins */ /*   	
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        width: 1026px; 
         margin: 0 auto;
     }
+    */
 }
 
 /* ==========================================================================
