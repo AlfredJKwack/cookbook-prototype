@@ -10,7 +10,7 @@ $(document).ready(function() {
 	$('#right-menu').sidr({
 		name: 'menu-right',
 		side: 'right',
-		body: 'body, article header'
+		body: 'body'
 	});
 	
 	// Close all side panels on resize

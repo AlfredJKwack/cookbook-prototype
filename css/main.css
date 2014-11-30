@@ -340,11 +340,9 @@ nav a:hover {
     }
 
 	article header {
-		
 		position: fixed;
 		left: 2.5%;
-		width: 50%;
-		padding-right: 55%;
+		width: 45%;
 		max-width: 680px;
 		overflow: hidden;
 		color: white;
