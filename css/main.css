@@ -65,10 +65,12 @@ body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
+
 .wrapper {
     width: 90%;
     margin: 0 5%;
 }
+
 
 /* ===================
     ALL: Orange Theme
@@ -242,10 +244,12 @@ nav a:hover {
         float: left;
     }
 
+    /*
     nav {
         float: right;
         width: 38%;
     }
+    */
 
 /* ============
     WIDE: Main
@@ -262,16 +266,115 @@ nav a:hover {
     }
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1024px) {
 
 /* ===============
     Maximal Width
    =============== */
+   
+	.header-container {
+	   width: 50%;
+	   height: 100%;
+	   overflow-x: visible;
+	   overflow-y: visible;
+	   position: fixed;
+	   background: rgba(125, 125, 125, 0);
+	   z-index: 999 !important;
+	}
+	
+	.header-container header {
+		width: 100%;
+		z-index: 10 !important;
+	}
+	
+	#left-menu, #right-menu {
+		top: 25px;
+		display: block;
+	}
+	
+	#left-menu {
+		border: 5px solid white;
+		color: white;
+		text-decoration: none;
+		padding: 0.2em 0.7em;
+		right: 5%;
+		position: absolute;	
+	}
+	#right-menu {
+		border: 2px solid black;
+		color: black;
+		font-size: 1.2em;
+		text-decoration: none;
+		padding: 0.2em 0.7em;		
+		right: -95%;
+		position: absolute;	
+	}	
+	
+	.main-container, .footer-container {
+	    margin-left: 50%;
+		position: relative;
+	}
+	
+	.main {
+		padding-top: 100px; /* height of .header-container header */
+	}
+	
+    .main article {
+        float: left;
+        width: 100%;
+        max-width: 680px;
+    }
 
+	article header {
+		position: fixed;
+		margin: 0 5%;
+		left: -2.5%;
+		width: 45%;
+		max-width: 680px;
+		overflow: hidden;
+		color: white;
+	}
+	
+	.featured-img {
+		display: block;
+	    overflow: hidden;
+	    position: fixed;
+	    top: 0;
+	    left:-5%;
+	    width: 55%;
+   	    height: 100%;
+   	    z-index: -2;
+   		text-align: center;
+	}
+	.featured-img img {
+	    height: 100%;
+	    position: absolute;
+	    top: -9999px;
+	    bottom: -9999px;
+	    left: -9999px;
+	    right: -9999px;
+	    margin: auto;	    
+	}
+	
+	
+	
+	.main aside {
+	   width: 90%;
+	   float: left;
+       max-width: 612px; /* 90% of .main article */
+	}
+
+	
+	#menu-left { 
+		width: 90%
+	}
+   
+   	/* 1140px - 10% for margins */ /*   	
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        width: 1026px; 
         margin: 0 auto;
     }
+    */
 }
 
 /* ==========================================================================
