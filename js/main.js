@@ -4,11 +4,13 @@ $(document).ready(function() {
 	// Create side panels
 	$('#left-menu').sidr({
 		name: 'menu-left',
-		side: 'left'
+		side: 'left',
+		body: 'body, article header'
 	});
 	$('#right-menu').sidr({
 		name: 'menu-right',
-		side: 'right'
+		side: 'right',
+		body: 'body, article header'
 	});
 	
 	// Close all side panels on resize
