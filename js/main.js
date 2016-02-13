@@ -1,21 +1,14 @@
 
 $(document).ready(function() {
 	
-	// Create side panels
-	$('#left-menu').sidr({
-		name: 'menu-left',
-		side: 'left',
-		body: 'body, article header'
+	$('.left-menu').click(function() {
+		if ($('body').hasClass('is--pushed-left')){$('body').toggleClass('is--pushed-left')}
+		$('body').toggleClass('is--pushed-right');
+		$('article #abstract .trigger').toggleClass('is--hidden');
+		$('#article_list').toggleClass('is--revealed');
 	});
-	$('#right-menu').sidr({
-		name: 'menu-right',
-		side: 'right',
-		body: 'body'
+	$('.right-menu').click(function() {
+		if ($('body').hasClass('is--pushed-right')){$('body').toggleClass('is--pushed-right')}
+		$('body').toggleClass('is--pushed-left');
 	});
-	
-	// Close all side panels on resize
-	window.onresize = function(){
-		jQuery.sidr('close', 'menu-left');
-		jQuery.sidr('close', 'menu-right');
-	}
 }); 
