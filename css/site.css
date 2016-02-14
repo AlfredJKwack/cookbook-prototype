@@ -50,7 +50,6 @@
 	-moz-transition-property: -moz-transform;
 	-ms-transition-property: -ms-transform;
 	-o-transition-property: -o-transform;
-	transition-delay: 0;
 	-webkit-transition-property: transform;
 	-webkit-transition-duration: .5s;
 	-webkit-transition-timing-function: cubic-bezier(.33,0,.2,1);
@@ -70,7 +69,7 @@
 	transition-property: transform;
 	transition-duration: .5s;
 	transition-timing-function: cubic-bezier(.33,0,.2,1);
-	-transition-delay: 0;
+	transition-delay: 0;
 }
 
 .site-brand-container {
@@ -81,7 +80,6 @@
 	-moz-transition-property: -moz-transform;
 	-ms-transition-property: -ms-transform;
 	-o-transition-property: -o-transform;
-	transition-delay: 0;
 	-webkit-transition-property: transform;
 	-webkit-transition-duration: .5s;
 	-webkit-transition-timing-function: cubic-bezier(.33,0,.2,1);
@@ -101,7 +99,7 @@
 	transition-property: transform;
 	transition-duration: .5s;
 	transition-timing-function: cubic-bezier(.33,0,.2,1);
-	-transition-delay: 0;
+	transition-delay: 0;
 }
 
 .site-brand-container h1 {
@@ -148,7 +146,6 @@ article {
 	-moz-transition-property: -moz-transform;
 	-ms-transition-property: -ms-transform;
 	-o-transition-property: -o-transform;
-	transition-delay: 0;
 	-webkit-transition-property: transform;
 	-webkit-transition-duration: .5s;
 	-webkit-transition-timing-function: cubic-bezier(.33,0,.2,1);
@@ -168,7 +165,7 @@ article {
 	transition-property: transform;
 	transition-duration: .5s;
 	transition-timing-function: cubic-bezier(.33,0,.2,1);
-	-transition-delay: 0;
+	transition-delay: 0;
 }
 
 article > header {
@@ -197,10 +194,10 @@ article > header {
 	transition-property: width;
 	transition-duration: 0s;
 	transition-timing-function: ease-in;
-	-transition-delay: .2s;
+	transition-delay: .2s;
 }
 
-article > header > span.featured-img {
+article > header > div.featured-img {
 	height: 100%;
 	z-index: 1;
 	opacity: 1;
@@ -223,7 +220,7 @@ article > header > span.featured-img {
 	transition-property: opacity, left, top, width;
 	transition-duration: 1s, .1s, .1s, .1s;
 	transition-timing-function: cubic-bezier(.33,0,.2,1);
-	-transition-delay: 0;
+	transition-delay: 0;
 }
 
 article > header > #abstract,
@@ -263,7 +260,6 @@ article > #article_body {
 	-moz-transition-property: -moz-transform;
 	-ms-transition-property: -ms-transform;
 	-o-transition-property: -o-transform;
-	transition-delay: 0;
 	-webkit-transition-property: transform;
 	-webkit-transition-duration: .2s;
 	-webkit-transition-timing-function: ease-in;
@@ -283,7 +279,7 @@ article > #article_body {
 	transition-property: transform;
 	transition-duration: .2s;
 	transition-timing-function: ease-in;
-	-transition-delay: 0;
+	transition-delay: 0;
 }
 
 article > footer {
@@ -415,30 +411,6 @@ article > footer {
     opacity: 0
 }
 
-@media all and (max-width: 1200px) {
-    .is--pushed-right .site-brand-container {
-        -webkit-transform:translate3d(300%,0,0);
-        -moz-transform: translate3d(300%,0,0);
-        -ms-transform: translate3d(300%,0,0);
-        -o-transform: translate3d(300%,0,0);
-        transform: translate3d(300%,0,0)
-    }
-/*    .is--pushed-right .navigation-main-button {
-        -webkit-transform: translate3d(75%,0,0);
-        -moz-transform: translate3d(75%,0,0);
-        -ms-transform: translate3d(75%,0,0);
-        -o-transform: translate3d(75%,0,0);
-        transform: translate3d(75%,0,0)
-    }*/
-
-    .is--pushed-right article {
-        -webkit-transform: translate3d(75%,0,0);
-        -moz-transform: translate3d(75%,0,0);
-        -ms-transform: translate3d(75%,0,0);
-        -o-transform: translate3d(75%,0,0);
-        transform: translate3d(75%,0,0)
-    }
-}
 @media all and (max-width: 1023px) {
     body:not(.is--pushed-right) #layout:not(.full-screen-main-image) .content {
         height: auto !important
@@ -565,9 +537,11 @@ article > footer {
 	    max-height: 638px;
 	    overflow: visible;
 	}
-	article > header > span.featured-img {
+	article > header > div.featured-img {
+		/*
 		top: 0em; /* 2*0.67em = 2*margin on h1 in header */
 	    min-height: 265px;
+	    width: 100%;
 	    position: absolute;
 	    overflow: hidden;
 	}

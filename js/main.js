@@ -11,4 +11,5 @@ $(document).ready(function() {
 		if ($('body').hasClass('is--pushed-right')){$('body').toggleClass('is--pushed-right')}
 		$('body').toggleClass('is--pushed-left');
 	});
+	$('.focuspoint').focusPoint();
 }); 
