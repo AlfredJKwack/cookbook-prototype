@@ -1,8 +1,8 @@
 function calcFocus(cropSize, imgSize) {
 	//converting a topLeft origin with box coordinate axis to a center based coordinate one.
 	var focusPt = {
-		x: (cropSize.x + (cropSize.width/2))-(imgSize.w/2),
-		y: (imgSize.h/2) - (cropSize.y + (cropSize.height/2))		
+		x: ((cropSize.x + (cropSize.width/2))-(imgSize.w/2))/(imgSize.w/2),
+		y: ((imgSize.h/2) - (cropSize.y + (cropSize.height/2)))/(imgSize.h/2)		
 	};
 	return focusPt;
 }
