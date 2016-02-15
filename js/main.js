@@ -50,8 +50,14 @@ $(document).ready(function() {
 			"data-focus-h": imgData.h
 		});
 		
-		//set the focus point
+		// set the focus point
 		$('.focuspoint').focusPoint();
+		
+		// set the text color based on the feature image background
+		BackgroundCheck.init({
+			targets: 'header',
+			images: 'div.featured-img img'
+		});
 		
 	}).attr('src', $('div.featured-img.focuspoint img')[0].src);	
 	

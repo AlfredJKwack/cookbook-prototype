@@ -29,9 +29,19 @@ font-family: 'Lato', sans-serif;
 body {
 	font-family: 'Moon-light', Fallback, sans-serif;
 }
+
+/* begin: text which covers feature image */
 .site-brand-container header, article header {
 	color: white;
 }
+.background--light {
+  color: black;
+}
+.background--dark {
+  color: white;
+}
+/* end: text which covers feature image */
+
 .right-menu span {
 	font-size: 2.4em;
     float: left;
