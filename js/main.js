@@ -20,16 +20,44 @@ $(document).ready(function() {
 		if ($('body').hasClass('is--pushed-right')){$('body').toggleClass('is--pushed-right')}
 		$('body').toggleClass('is--pushed-left');
 	});
+
 	
-	// crop and size the featured image
+
+
+
+	//
+	// Handle the featured image eye candy
+	//
+	//
+	var $theImage = $('div.featured-img.focuspoint img')[0]
+
+	// fire when image has loaded
 	$('<img />').one('load', function() {
+
+
+		// Set background of image to dominant image color
+		var colorThief = new ColorThief();
+		var color = colorThief.getColor($theImage);
+		var rgbValue = 'rgb('+color.join()+')';
+		var rgbaValue = 'rgba('+color.join()+',0.2)';
+		$('div.featured-img').css('background-color', rgbValue);
 		
-		//'this' references to the newly created image
+		// Set background of text to the same with transparency
+		// ISSUE: Layout of abstract doesn't cover image area...
+		//$('#abstract').css('background-color', rgbaValue);
+		
+		// set the text color based on the feature image background
+		BackgroundCheck.init({
+			targets: 'header',
+			images: $theImage
+		});
+		
+		//'this' references to the newly created <img />
 		var imgData = {
 			w: this.width,
 			h: this.height			
 		};
-		
+
 		// get an appropriate crop window
 		var cropData = SmartCrop.crop(this, {
 				width: 250,		// keeping this slightly smaller than min-height
@@ -40,26 +68,19 @@ $(document).ready(function() {
 			}
 		);
 		
-		// get a focus point
+		// get and set a focus point
 		var focusPoint = calcFocus(cropData.topCrop, imgData);
-		
 		$('div.featured-img.focuspoint').attr({
 			"data-focus-x": focusPoint.x,
 			"data-focus-y": focusPoint.y,
 			"data-focus-w": imgData.w,
 			"data-focus-h": imgData.h
 		});
-		
-		// set the focus point
 		$('.focuspoint').focusPoint();
 		
-		// set the text color based on the feature image background
-		BackgroundCheck.init({
-			targets: 'header',
-			images: 'div.featured-img img'
-		});
+		// make the image appear
+		$($theImage).removeClass('is--invisible').hide().fadeIn(800);	
 		
-	}).attr('src', $('div.featured-img.focuspoint img')[0].src);	
+	}).attr('src', $theImage.src);
 	
-}); 
-
+});
