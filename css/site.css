@@ -273,13 +273,16 @@ article > header > div.featured-img {
 	transition-delay: 0;
 }
 
-article > header > #abstract,
-article > #article_body {
+article > header > #abstract {
 	padding: 0 5%;		
+}
+article > #article_body {
+	padding: 0 2.5%;		
 }
 
 article > header > #abstract {
-	top: 180px;
+	top: 0px;
+	padding-top: 120px;
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -293,7 +296,7 @@ article > header > #abstract {
 }
 
 article > #article_body {
-	padding-top: 180px;
+	padding-top: 120px;
 	width: 50%;
 	height: 100%;
 	margin-left: 50%;
@@ -355,7 +358,7 @@ article > footer {
 
 #abstract a.left-menu {
 	position: absolute;
-	top: -150px; /* [offset from top] - [article > header > #abstract {top}] */
+	top: 30px;
 	right: 30px;
 	background: rgba(255,255,255,0.1);
 	color: #ffffff;

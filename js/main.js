@@ -43,8 +43,7 @@ $(document).ready(function() {
 		$('div.featured-img').css('background-color', rgbValue);
 		
 		// Set background of text to the same with transparency
-		// ISSUE: Layout of abstract doesn't cover image area...
-		//$('#abstract').css('background-color', rgbaValue);
+		$('#abstract').css('background-color', rgbaValue);
 		
 		// set the text color based on the feature image background
 		BackgroundCheck.init({
@@ -79,7 +78,7 @@ $(document).ready(function() {
 		$('.focuspoint').focusPoint();
 		
 		// make the image appear
-		$($theImage).removeClass('is--invisible').hide().fadeIn(800);	
+		$($theImage).removeClass('is--invisible').hide().fadeIn(800, 'easeOutQuad');	
 		
 	}).attr('src', $theImage.src);
 	
