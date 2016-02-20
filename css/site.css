@@ -1,37 +1,12 @@
+
+@import url("textstyles-1.css");
+
 /***
- * Fonts	
+ * Main site layout	
  */
 
-/***
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Sue+Ellen+Francisco|Lato:400,400italic,700); 
-font-family: 'Dancing Script', cursive;
-font-family: 'Sue Ellen Francisco', cursive;
-font-family: 'Lato', sans-serif;
-***/
-@font-face {
-  font-family: 'Moon-light';
-  src: url('../fonts/Moon-light.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/Moon-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/Moon-light.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/Moon-light.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/Moon-light.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/Moon-light.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-@font-face {
-  font-family: 'Moon-Bold';
-  src: url('../fonts/Moon-Bold.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/Moon-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/Moon-Bold.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/Moon-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/Moon-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/Moon-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-body {
-	font-family: 'Moon-light', Fallback, sans-serif;
-}
-
 /* begin: text which covers feature image */
-.site-brand-container header, article header {
+.site-brand-container > header, .main > article > header {
 	color: white;
 }
 .background--light {
@@ -182,7 +157,7 @@ body {
 	line-height: 50px; /* Same as button */
 }
 
-article {
+.main > article {
 	position: relative;
 	z-index: 1;
 	width: 66.66667%;
@@ -218,7 +193,7 @@ article {
 	transition-delay: 0;
 }
 
-article > header {
+.main > article > header {
 	width: 50%;
 	height: 100vh;
 	max-height: 100vh;
@@ -247,7 +222,7 @@ article > header {
 	transition-delay: .2s;
 }
 
-article > header > div.featured-img {
+.main > article > header > div.featured-img {
 	height: 100%;
 	z-index: 1;
 	opacity: 1;
@@ -273,14 +248,15 @@ article > header > div.featured-img {
 	transition-delay: 0;
 }
 
-article > header > #abstract {
+.main > article > header > #abstract {
 	padding: 0 5%;		
 }
-article > #article_body {
+
+.main > article > #article_body {
 	padding: 0 2.5%;		
 }
 
-article > header > #abstract {
+.main > article > header > #abstract {
 	top: 0px;
 	padding-top: 120px;
 	width: 100%;
@@ -295,7 +271,7 @@ article > header > #abstract {
 	-webkit-backface-visibility: hidden;
 }
 
-article > #article_body {
+.main > article > #article_body {
 	padding-top: 120px;
 	width: 50%;
 	height: 100%;
@@ -335,7 +311,7 @@ article > #article_body {
 	transition-delay: 0;
 }
 
-article > footer {
+.main > article > footer {
 	padding-bottom: 180px;
 }
 
@@ -421,7 +397,7 @@ article > footer {
 .is--pushed-right .site-brand-container * {
     cursor: w-resize !important
 }
-.is--pushed-right article {
+.is--pushed-right .main > article {
     -webkit-transform: translate3d(50%,0,0);
     -moz-transform: translate3d(50%,0,0);
     -ms-transform: translate3d(50%,0,0);
@@ -484,7 +460,7 @@ article > footer {
         transform: translate3d(90%,0,0)
     }*/
 
-    .is--pushed-right article {
+    .is--pushed-right .main > article {
         -webkit-transform: translate3d(90%,0,0);
         -moz-transform: translate3d(90%,0,0);
         -ms-transform: translate3d(90%,0,0);
@@ -497,7 +473,7 @@ article > footer {
     left: 100%
 }
 
-.ie8 .is--pushed-right .article,.ie9 .is--pushed-right .article {
+.ie8 .is--pushed-right .main .article,.ie9 .is--pushed-right .main .article {
     left: 50%
 }
 /*** END - Push Content Right ***/
@@ -514,9 +490,11 @@ article > footer {
     -o-transform: translate3d(-260px,0,0);
     transform: translate3d(-260px,0,0)
 }
+/*
 .is--pushed-left section {
     cursor: e-resize
 }
+*/
 .ie8 .is--pushed-left .main-container,.ie9 .is--pushed-left .main-container {
     left: -260px
 }
@@ -557,17 +535,21 @@ article > footer {
 /*** END - Main Navigation ***/
 
 @media all and (max-width: 1500px) {
+	/*
 	.section .item-content-wrapper {
         width: 85%;
         margin-left: 7.5%;
         margin-right: 7.5%
     }
+    */
 }
 
 @media screen and (max-width: 1024px){
+	/*
     .article .section .item-content-wrapper {
         margin-top: 75px
     }
+    */
 }
 
 @media all and (max-width: 1023px) {
@@ -579,10 +561,10 @@ article > footer {
 	.main-container:not(.full-screen-main-image) {
 	    height: auto !important;
 	}	
-	.main, article {
+	.main, .main > article {
 	    width: 100%;
 	}
-	article > header {
+	.main > article > header {
 	    height: auto !important;
 	    min-height: 265px;
 	    position: relative;
@@ -590,7 +572,7 @@ article > footer {
 	    max-height: 638px;
 	    overflow: visible;
 	}
-	article > header > div.featured-img {
+	.main > article > header > div.featured-img {
 		/*
 		top: 0em; /* 2*0.67em = 2*margin on h1 in header */
 	    min-height: 265px;
@@ -599,12 +581,12 @@ article > footer {
 	    overflow: hidden;
 	}
 
-	article > header > #abstract {
+	.main > article > header > #abstract {
 		padding-bottom: 209px; /* article > header > #abstract {top} + artcile > header > h1 height; */
 		position: relative;
 	}
 
-	article > #article_body {
+	.main > article > #article_body {
 		padding-top: inherit;		
 	    width: 100%;
 	    height: auto !important;
@@ -612,21 +594,26 @@ article > footer {
 	    margin-left: 0px;
 	    position: static;
 	    overflow: visible;
-	}		
+	}
+	/*		
     .article .section .item-content-wrapper {
         margin-top: 21px
     }
+    
     .section .item-content-wrapper {
         width: 90%;
         margin: 80px 5%;
         border-top-color: transparent
-    }   
+    }
+    */   
 }
 
 @media screen and (max-width: 640px) {
+	/*
     .section .item-content-wrapper {
         padding-top: 0
     }
+    */
 }
 
 @media screen and (max-width: 724px) {

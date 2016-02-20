@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo:700|Josefin+Slab);
+/***
+ * General	
+ */
+ 	html { 
+		font-size: 62.5%;
+	} 
+	body {
+		font-size: 1.9rem;
+		line-height: 1.4;
+		text-rendering: optimizeLegibility;
+		font-family: 'Josefin Slab', serif;
+	}
+	
+/***
+ * Headers	
+ */
+	.site-brand-container h1{
+		font-size: 1rem;
+	}
+	#abstract h1 {
+	    font-family: 'Arvo', serif;
+	    font-size: 6rem;
+	    line-height: 7rem;
+	}
+	#article_body > section > p:first-child {
+		font-size: 2.5rem;
+		line-height: 2.6rem;	
+	}
+	#article_body > section > p:first-child:first-letter { 
+		float: left; 
+		color: #903; 
+		font-size: 6rem; 
+		font-weight: bold;
+		line-height: 5rem; 
+		padding-right: 0.2rem; 
+		padding-left: 0.2rem; 
+		margin-top: -0.2rem;
+		font-family: sans;
+	}
+	
+/***
+ * Blockquotes	
+ */
+	blockquote, q {
+		quotes: "“" "”" "‘" "’";
+	}
+	blockquote {
+	    background: #f9f9f9;
+	    border-left: 10px solid #ccc;
+	    margin: 1.5em 10px;
+	    padding: .5em 10px;
+	}
+	
+	blockquote:before {
+	    color: #ccc;
+	    content: open-quote;
+	    font-family: "Times New Roman", Times, serif;
+	    font-size: 6em;
+	    line-height: 0.1em;
+	    margin-right: -0.05em;
+	    vertical-align: -0.36em;
+	}
+	blockquote p {
+	  display: inline;
+	}
+	blockquote cite {
+		float: right;
+	    position: relative;
+	    bottom: -0.2em;
+	    font-size: 0.9em;
+	}
+
+/***
+ * anchors	
+ */
+ 	a {
+		position: relative;
+		display: inline-block;
+		outline: none;
+		line-height: 1.35; /* must be .1 smaller than parent line height */
+		font-weight: 400;
+		vertical-align: bottom;
+		text-decoration: none;
+		white-space: nowrap;
+		color: #404d5b;
+		border-bottom: 1px solid rgba(52,73,94,0.4);
+		-webkit-transition: background-color 0.3s, border-color 0.3s;
+		-moz-transition: background-color 0.3s, border-color 0.3s;
+		-ms-transition: background-color 0.3s, border-color 0.3s;
+		-o-transition: background-color 0.3s, border-color 0.3s;
+		transition: background-color 0.3s, border-color 0.3s; 	
+	}
+		a:hover, a:focus {
+		border-color: rgba(52,73,94,0);
+		background-color: rgba(52,73,94,0.1);
+	}
+	/* 	clean up unwanted side-effects on gui */
+	a.right-menu {
+		border-width: 0px;
+	}
+
+/***
+ * lists	
+ */
+ 	ul {
+	 	list-style:circle;
+ 	}
+	ol {
+	    list-style-type: none;
+	    margin-left: 13px;
+	    padding-right: 0;	
+	}
+	ol li {
+		counter-increment: step-counter;
+		display: block;
+		margin: 0.3em 0;
+	}
+	ol li::first-letter {
+		font-size: 150%;
+	}
+	ol li::before {
+	    background-color: #f9f9f9;
+	    border: 1px solid #ccc;
+		content: counter(step-counter);
+	    position: relative;
+	    display: inline-block;
+	    left: -2em;
+	    margin-right: -1.3em;
+	    width: 1.2em;
+	    height: 1.2em;
+	    text-align: center;
+	    -webkit-border-radius: 1.5em;
+	    -moz-border-radius: 1.5em;
+	    border-radius: 1.5em;
+	}
