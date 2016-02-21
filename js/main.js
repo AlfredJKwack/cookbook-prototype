@@ -21,10 +21,6 @@ $(document).ready(function() {
 		$('body').toggleClass('is--pushed-left');
 	});
 
-	
-
-
-
 	//
 	// Handle the featured image eye candy
 	//
@@ -41,15 +37,8 @@ $(document).ready(function() {
 		var rgbValue = 'rgb('+color.join()+')';
 		var rgbaValue = 'rgba('+color.join()+',0.2)';
 		$('div.featured-img').css('background-color', rgbValue);
+		//$('#abstract').css('background-color', rgbaValue);
 		
-		// Set background of text to the same with transparency
-		$('#abstract').css('background-color', rgbaValue);
-		
-		// set the text color based on the feature image background
-		BackgroundCheck.init({
-			targets: 'header',
-			images: $theImage
-		});
 		
 		//'this' references to the newly created <img />
 		var imgData = {
@@ -76,6 +65,13 @@ $(document).ready(function() {
 			"data-focus-h": imgData.h
 		});
 		$('.focuspoint').focusPoint();
+		
+		// set the text color based on the feature image background
+		BackgroundCheck.init({
+			minComplexity: 16,
+			targets: '#abstract h1, #meta, #brand-link',
+			images: $theImage
+		});		
 		
 		// make the image appear
 		$($theImage).removeClass('is--invisible').hide().fadeIn(800, 'easeOutQuad');	
