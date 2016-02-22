@@ -68,7 +68,6 @@
 	    border-left: 10px solid #ccc;
 	    margin: 1.5em 10px;
 	    padding: .5em 10px;
-	    overflow: hidden;
 	}
 	
 	blockquote:before {
@@ -84,7 +83,6 @@
 	  display: inline;
 	}
 	blockquote cite {
-		float: right;
 	    position: relative;
 	    bottom: -0.2em;
 	    font-size: 0.9em;
