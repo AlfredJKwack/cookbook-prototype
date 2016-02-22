@@ -129,11 +129,12 @@
 	transition-delay: 0;
 }
 
-.site-brand-container h1 {
-	padding: 0 0 0 10%;
-	margin-top: 30px;
-	line-height: 50px;
+.site-brand-container {
+	padding: 0 0 0 2.5%;
+/* 	margin-top: 30px; */
 }
+
+
 @media all and (max-width: 1023px) {
 	.site-brand-container h1 {
 		padding: 0 20%;
@@ -250,17 +251,14 @@
 	transition-delay: 0;
 }
 
-.main > article > header > #abstract {
-	padding: 0 5%;		
-}
-
 .main > article > #article_body {
 	padding: 0 2.5%;		
 }
 
 .main > article > header > #abstract {
 	top: 0px;
-	padding-top: 120px;
+	padding: 0 5%;		
+	padding-top: 180px;
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -540,50 +538,59 @@
 /***
  *  Utilities
  */
- .sstamp {
-	border-image: url(../img/stamp-border.png) 8 round;
-	border-width: 8px;
-	border-style: solid; 
-	border-image-outset: 8px;
-	background: white;
-    -webkit-border-radius: 3em;
-    -moz-border-radius: 3em;
-    border-radius: 3em;
-    display: inline-block;
-}
-.sstamp {
-	width: 280px;
-	height: 180px;
-    -webkit-border-radius: 3em;
-    -moz-border-radius: 3em;
-    border-radius: 3em;
+#brand-wrapper {
 	display: inline-block;
+	text-align: center;
+	font-size: 0.8rem;
 	padding: 10px;
-	background: white;
+	background: rgba(255,255,255,1);
 	position: relative;
-	-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
-	/*The stamp cutout will be created using crisp radial gradients*/
-	background: radial-gradient(
-		transparent 0px, 
-		transparent 4px, 
-		white 4px,
-		white
-	);
-	/*reducing the gradient size*/
-	background-size: 20px 20px;
-	/*Offset to move the holes to the edge*/
-	background-position: -10px -10px;
 }
-.stamp:after {
-	content: '';
-	position: absolute;
-	/*We can shrink the pseudo element here to hide the shadow edges*/
-	left: 5px; top: 5px; right: 5px; bottom: 5px;
-	/*Shadow - doesn't look good because of the stamp cutout. We can still move this into another pseudo element behind the .stamp main element*/
-	
-  /*box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);*/
-	/*pushing it back*/
-	z-index: -1;
+#brand-wrapper h1 {
+  padding: 1em 0.5em 0.5em 0.5em;
+  margin: 0;
+  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(255, 255, 255, 0.8);
+  font-size: 3em;
+  font-family: 'Lobster', cursive;
+}
+#brand-wrapper a {
+  text-decoration: none; 
+  color: inherit;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  display: block;
+  height: 2.7em;
+}
+#brand-wrapper a span {
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index:2;
+}
+#brand-wrapper a span:nth-child(2) {
+  font-size: 0.8em;
+  margin: 0 auto;
+  top:-0.25em;
+  width: 2.2em;
+  z-index:1;
+}
+/*
+#brand-wrapper a:before {
+  content:"";
+  display: block;
+  position: absolute;
+  z-index:0;
+  top: 1.2em;
+  width: 100%;
+  border-bottom: 3px solid #000;
+}
+*/
+#brand-wrapper a span:nth-child(3) {
+  font-size: 1.2em;
+  top:-0.3em;
 }
 
 

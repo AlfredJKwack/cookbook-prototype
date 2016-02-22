@@ -113,7 +113,7 @@
 		-o-transition: background-color 0.3s, border-color 0.3s;
 		transition: background-color 0.3s, border-color 0.3s; 	
 	}
-		a:hover:not(brand-link), a:focus:not(brand-link) {
+	a:hover:not(#brand-link), a:focus:not(#brand-link) {
 		border-color: rgba(52,73,94,0);
 		background-color: rgba(52,73,94,0.1);
 	}
