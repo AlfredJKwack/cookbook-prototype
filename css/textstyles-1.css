@@ -113,13 +113,9 @@
 		-o-transition: background-color 0.3s, border-color 0.3s;
 		transition: background-color 0.3s, border-color 0.3s; 	
 	}
-	a:hover:not(#brand-link), a:focus:not(#brand-link) {
+	a:hover:not(.button), a:focus:not(.button) {
 		border-color: rgba(52,73,94,0);
 		background-color: rgba(52,73,94,0.1);
-	}
-	/* 	clean up unwanted side-effects on gui */
-	a.right-menu, a.left-menu {
-		border-width: 0px;
 	}
 
 /***
