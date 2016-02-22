@@ -258,7 +258,7 @@
 .main > article > header > #abstract {
 	top: 0px;
 	padding: 0 5%;		
-	padding-top: 180px;
+	padding-top: 7em;
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -272,7 +272,7 @@
 }
 
 .main > article > #article_body {
-	padding-top: 120px;
+	padding-top: 7em;
 	width: 50%;
 	height: 100%;
 	margin-left: 50%;

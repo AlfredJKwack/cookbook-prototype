@@ -97,7 +97,7 @@
  	a {
 	 	text-decoration: none;
  	}
- 	a:not(#brand-link) {
+ 	a:not(.button) {
 		position: relative;
 		display: inline-block;
 		outline: none;
