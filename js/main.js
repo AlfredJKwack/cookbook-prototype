@@ -18,8 +18,10 @@ $(document).ready(function() {
 	});
 	$('.right-menu').click(function() {
 		$(this).toggleClass('trigger--active');
-		if ($('body').hasClass('is--pushed-right')){$('body').toggleClass('is--pushed-right')}
+		if ($('body').hasClass('is--pushed-right')){$('body').toggleClass('is--pushed-right')};
 		$('body').toggleClass('is--pushed-left');
+		$('#navigation_main').toggleClass('is--revealed');
+		$('#navigation_main').toggleClass('is--fadeable');
 	});
 
 	//
