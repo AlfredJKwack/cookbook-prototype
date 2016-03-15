@@ -17,7 +17,7 @@ $(document).ready(function() {
 		$('#article_list').toggleClass('is--revealed');
 	});
 	$('.right-menu').click(function() {
-		$(this).toggleClass('trigger--active');
+		$('.right-menu').toggleClass('trigger--active');
 		if ($('body').hasClass('is--pushed-right')){$('body').toggleClass('is--pushed-right')};
 		$('body').toggleClass('is--pushed-left');
 		$('#navigation_main').toggleClass('is--revealed');
